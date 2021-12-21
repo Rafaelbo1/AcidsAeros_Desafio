@@ -33,6 +33,10 @@ Optou-se por remover as colunas com mais do que 4% de dados ausentes, tendo em v
 <br>
 <br>
 Foram realizadas algumas análises na base de dados do desafio para compreender melhor como os dados estão "distribuidos". A partir de então, percebeu-se claramente um desbalanceamento no que foi nossa variável de saída dos modelos preditivos que foram extraidas da coluna "classificacao_ocorrencia": Aciente, Incidente e Incidente Grave. Com tal desbalanceamento pode haver problemas de overfitting, maior aprendizado para a variável de maior quantidade de dados. Tal hipótese se confirmou nos teste realizados.
+<br>
+<br>
+Como a base de dados utilizada possui valores categóricos, houve a necessidade de codificação dos dados categóricos. Realizou-se para esta etapa a codificação por "enumeração" das "labels" ou usando a biblioteca 'scikit-learn - LabelEncoder()'. Optou-se por esse método de codificação por ser o mais simple e por exigir menor processamento na execução.
+Para a codificação dos dados categóricos de saída, optou-se pelo one-hot-encoding, uma vez que modelos de aprendizagem de máquina para classificação ajustam-se melhor com esse tippo de saída, usando como função 'loss' a loss='categorical_crossentropy' e a métrica de avaliação o modelo a metrics=['accuracy'].
 
 
 
