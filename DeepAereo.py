@@ -45,6 +45,7 @@ a=ocorr_otnave.iloc[1,:]
 print(ocorr_otnave.iloc[1,:])
 print(corr)
 sns.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns, cmap='coolwarm')
+plt.savefig('pearson.png')
 plt.show()
 
 #Separação das variáveis de entrada e da variável de saída para serem inseridas nos modelos
@@ -61,7 +62,7 @@ X_train, X_test, Y_train, Y_test, caso_test  = f.tratamento_dados(X,Y)
 #Base de dados otimizada/balanceada
 oversample = RandomOverSampler(sampling_strategy='not majority')
 X_over, Y_over = oversample.fit_resample(X, Y)
-# X_train, X_test, Y_train, Y_test, caso_test = f.tratamento_dados(X_over, Y_over)
+#X_train, X_test, Y_train, Y_test, caso_test = f.tratamento_dados(X_over, Y_over)
 
 #Aplicação dos classificadores
 modelAereo , history = f.autoencoder(X_train, X_test, Y_train, Y_test)
