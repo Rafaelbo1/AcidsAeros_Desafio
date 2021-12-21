@@ -30,6 +30,7 @@ sns.countplot(y=ocorr_otnave.ocorrencia_classificacao, data=ocorr_otnave)
 plt.xlabel('Número de ocorrências')
 plt.ylabel('Tipo de ocorrência')
 plt.title('QUANTIDADE DE OCORRÊNCIAS POR CLASSIFICAÇÃO')
+plt.savefig('OcorrClass.png')
 plt.show()
 
 #Encoding das variáveis categóricas para inserção nos modelos preditivos
