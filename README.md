@@ -27,14 +27,14 @@ As demais ferramentas e libs utilizadas estão no "requirements.txt"
 # Análise exploratória e aplicação do desafio.
 <br>
 <br>
-*Etapa 1 -* Foi realizado o tratamento inicial para limpeza e organização dos dados a fim de gerar a visualização de gráficos para melhor compreensão do dataset utilizado.
+Etapa 1 - Foi realizado o tratamento inicial para limpeza e organização dos dados a fim de gerar a visualização de gráficos para melhor compreensão do dataset utilizado.
 Optou-se por remover as colunas com mais do que 4% de dados ausentes, tendo em vista o tigo de dado(categórico) e a maior complexidade de realizar técnicas de input para "missing values". Para as colunas que ainda ficaram com 'rows' sem dado, optou-se por excluir toda a linha para manter a integridade da base de dados.
 <br>
 <br>
-*Etapa 2 -* Foram realizadas algumas análises na base de dados do desafio para compreender melhor como os dados estão "distribuidos". A partir de então, percebeu-se claramente um desbalanceamento no que foi nossa variável de saída dos modelos preditivos que foram extraidas da coluna "classificacao_ocorrencia": Aciente, Incidente e Incidente Grave. Com tal desbalanceamento pode haver problemas de overfitting, maior aprendizado para a variável de maior quantidade de dados. Tal hipótese se confirmou nos teste realizados.
+Etapa 2 - Foram realizadas algumas análises na base de dados do desafio para compreender melhor como os dados estão "distribuidos". A partir de então, percebeu-se claramente um desbalanceamento no que foi nossa variável de saída dos modelos preditivos que foram extraidas da coluna "classificacao_ocorrencia": Aciente, Incidente e Incidente Grave. Com tal desbalanceamento pode haver problemas de overfitting, maior aprendizado para a variável de maior quantidade de dados. Tal hipótese se confirmou nos teste realizados.
 <br>
 <br>
-*Etapa 3 -* Como a base de dados utilizada possui valores categóricos, houve a necessidade de codificação dos dados categóricos. Realizou-se para esta etapa a codificação por "enumeração" das "labels" ou usando a biblioteca 'scikit-learn - LabelEncoder()'. Optou-se por esse método de codificação por ser o mais simple e por exigir menor processamento na execução.
+Etapa 3 - Como a base de dados utilizada possui valores categóricos, houve a necessidade de codificação dos dados categóricos. Realizou-se para esta etapa a codificação por "enumeração" das "labels" ou usando a biblioteca 'scikit-learn - LabelEncoder()'. Optou-se por esse método de codificação por ser o mais simple e por exigir menor processamento na execução.
 Para a codificação dos dados categóricos de saída, optou-se pelo one-hot-encoding, uma vez que modelos de aprendizagem de máquina para classificação ajustam-se melhor com esse tippo de saída, usando como função 'loss' a loss='categorical_crossentropy' e a métrica de avaliação o modelo a metrics=['accuracy'].
 
 
