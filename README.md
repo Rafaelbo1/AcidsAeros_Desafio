@@ -20,7 +20,7 @@ As Entidades e seus respctivos atribuitos foram extraídos dos seguintes arquivo
 # Requisitos
 
 * Python 3.6
-* As demais ferramentas e libs utilizadas estão no "requirements.txt"
+* As demais ferramentas e libs utilizadas estão no "requirements.txt" - para executar basta inserir o terminal: pip install -r requirements.txt
 <br>
 
 # Arquivos .py
