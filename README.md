@@ -15,16 +15,17 @@ As Entidades e seus respctivos atribuitos foram extraídos dos seguintes arquivo
 <br>
 <br>
 <a href='ocorrencia_tipo.csv'>Aeronave.csv</a>: As informações sobre o tipo de ocorrência estão contidas neste aquivo, do qual foi tirada apenas os dados da coluna onde está descrito o tipo da ocorrência registrada em 'ocorrencia.csv'.
+<br>
 
 # Requisitos
 
 * Python 3.6
 * As demais ferramentas e libs utilizadas estão no "requirements.txt"
 <br>
+
 # Arquivos .py
 * DeepAereo.py - é o código 'liso' para melhor vizualização do que está sendo feito em cada etapa.
 * functions.py - Onde estão inserídas as funções para execução da EDA, LSTM e GRU e Autoencoder, além do carregamento, limpeza e tratamento dos dados.
-
 <br>
 
 # Análise exploratória e aplicação do desafio.
@@ -47,10 +48,17 @@ O código do modelo está pronto para usar os algorítmos de LSTM e GRU e um Aut
 <br>
 A realização da técnica de balancemanto também foi aplicada, sendo possível a utilização do código com e sem a técnica.
 <br>
-<br>
-
 
 # Resultados.
 
+Overfitting - Para os dados desbalanceados houve claramente overfitting. o modelo de treino chegou a uma métrica de acurácia de até 99% enquanto o maxímo do teste foi de 86%. É possível ver o impacto do desbalancemanto principalmente na matriz confusão, onde o modelo tem melhor desempenho/acertividade na classificação daquela variável com maior qunatidade de dados no dataset
+<br>
+Aplicação de métodos - foram aplicados variadas técnicas para tentar reverter o overfittng como o drop, bacthnormalizatin, inicialização uniforme dos pesos, mudança de função de ativação, entre outras. O método que reduziu drasticamente essa diferença de resultados entre treino e teste foi o de balancear a base de dados usando o método de "replicação" de novos dados com base nas características do dataset para as variáveis de menor quantidade no dataset.
+<br>
+Resultado Final - o modelo continuou um uma relativa diferença nos resultado. 99% no treino e 94% no teste. É possível que esse resultado seja melhorado com outras configurações dos algorítmos usados e aplicações de novos métodos.
+<br>
+Simulação - Para simulação utilizou-se uma linha/amostra do dataset em que o resultado da classificação é  Incidente. Percebe-se que a classificação é realizada corretamente.
+<br>
+Recomendações - Orienta-se utilizar uma base de dade maior, ou usar novas técnicas para aumentar a quantidade de dados tanto para as variáveis com menor quantidade, como de um modo geral, pois, tem-se por nova hipótese, uma maior quantidade de dados irá trazer maior aprendizado da IA.
 
  
