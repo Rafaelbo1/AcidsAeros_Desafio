@@ -182,6 +182,8 @@ def autoencoder(X_train, X_test, Y_train, Y_test):
     plt.title('model acc')
     plt.ylabel('accuracy')
     plt.xlabel('epoch')
+    plt.title("AUTOENCODER")
+    plt.savefig('AUTOENCODER_Overfitting.png')
     plt.show()
     return autoencoder,history
 
@@ -222,5 +224,7 @@ def LSTM_GRU(X_train, X_test, Y_train, Y_test):
     plt.title('model acc')
     plt.ylabel('accuracy')
     plt.xlabel('epoch')
+    plt.title("LSTM")
+    plt.savefig('LSTM.png')
     plt.show()
     return model,history

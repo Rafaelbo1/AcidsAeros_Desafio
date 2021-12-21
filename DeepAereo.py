@@ -35,7 +35,7 @@ plt.show()
 
 #Encoding das variáveis categóricas para inserção nos modelos preditivos
 le = preprocessing.LabelEncoder()
-for coluna in ocorr_otnave.colunas:
+for coluna in ocorr_otnave.columns:
     if (ocorr_otnave[coluna].dtypes == 'object'):
         ocorr_otnave[coluna] = le.fit_transform(ocorr_otnave[coluna])
 
@@ -56,12 +56,12 @@ X, Y = ocorr_otnave.drop(['ocorrencia_classificacao'], axis=1), ocorr_otnave['oc
 # uma vez que o mesmo tem poucos dados armazenados para treino e teste dos modelo de classificação
 
 #Base de dados original
-# X_train, X_test, Y_train, Y_test, caso_test  = f.tratamento_dados(X,Y)
+X_train, X_test, Y_train, Y_test, caso_test  = f.tratamento_dados(X,Y)
 
 #Base de dados otimizada/balanceada
 oversample = RandomOverSampler(sampling_strategy='not majority')
 X_over, Y_over = oversample.fit_resample(X, Y)
-X_train, X_test, Y_train, Y_test, caso_test = f.tratamento_dados(X_over, Y_over)
+# X_train, X_test, Y_train, Y_test, caso_test = f.tratamento_dados(X_over, Y_over)
 
 #Aplicação dos classificadores
 modelAereo , history = f.autoencoder(X_train, X_test, Y_train, Y_test)
