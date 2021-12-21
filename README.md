@@ -1,4 +1,4 @@
-<a href='https://github.com/Rafaelbo1/AcidsAeros_Desafio'><b>
+<a href='https://github.com/Rafaelbo1/AcidsAeros_Desafio'></a>
 
 # Acidentes aéreos no Brasil
 Para este desafio foi utilizado parte do dataset que contém dados abertos disponibilizados pela CENIPA - Centro de Investigação e Prevenção de Acidentes aeronáuticos.
