@@ -19,8 +19,13 @@ As Entidades e seus respctivos atribuitos foram extraídos dos seguintes arquivo
 # Requisitos
 
 * Python 3.6
-
 As demais ferramentas e libs utilizadas estão no "requirements.txt"
+
+# Arquivos .py
+* DeepAereo.py - é o código 'liso' para melhor vizualização do que está sendo feito em cada etapa.
+* functions.py - Onde estão inserídas as funções para execução da EDA, LSTM e GRU e Autoencoder, além do carregamento, limpeza e tratamento dos dados.
+
+
 <br>
 <br>
 <br>
@@ -39,8 +44,15 @@ Para a codificação dos dados categóricos de saída, optou-se pelo one-hot-enc
 <br>
 <br>
 Etapa 4 - Acredita-se que com a base de dados é possível contruir um modelo de classificação para a variável 'ocorrencia_classificacao', a partir dessa premissa, realizou-se nesta etapa a utilização de dois algorítmos de DeepLearning (o objetivo era executar um algorítmo mais trabalhoso para maior aplicação de conhecimentos de modelos de IA/machinelearning - posteriormente, pode-se aplica outros como árvore de decisão, regressão logística, etc.).
-          O código do modelo está pronto para usar os algorítmos de LSTM e GRU e um Autoencoder. Ao final temos as métricas de avaliação e um teste com a inserção de uma ocorrência na IA salva, simulando, de forma beeemmm simples, uma aplicação prática, tal simulação é a última execução do código.
+<br>
+O código do modelo está pronto para usar os algorítmos de LSTM e GRU e um Autoencoder. Ao final temos as métricas de avaliação e um teste com a inserção de uma ocorrência na IA salva, simulando, de forma beeemmm simples, uma aplicação prática, tal simulação é a última execução do código.
+<br>
+A realização da técnica de balancemanto também foi aplicada, sendo possível a utilização do código com e sem a técnica.
+<br>
+<br>
 
+
+# Resultados.
 
 
  
