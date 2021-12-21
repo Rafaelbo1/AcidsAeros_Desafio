@@ -53,9 +53,13 @@ A realização da técnica de balancemanto também foi aplicada, sendo possível
 # Resultados.
 
 * Overfitting - Para os dados desbalanceados houve claramente overfitting. o modelo de treino chegou a uma métrica de acurácia de até 99% enquanto o maxímo do teste foi de 86%. É possível ver o impacto do desbalancemanto principalmente na matriz confusão, onde o modelo tem melhor desempenho/acertividade na classificação daquela variável com maior qunatidade de dados no dataset
+
 * Aplicação de métodos - foram aplicados variadas técnicas para tentar reverter o overfittng como o drop, bacthnormalizatin, inicialização uniforme dos pesos, mudança de função de ativação, entre outras. O método que reduziu drasticamente essa diferença de resultados entre treino e teste foi o de balancear a base de dados usando o método de "replicação" de novos dados com base nas características do dataset para as variáveis de menor quantidade no dataset.
+
 * Resultado Final - o modelo continuou um uma relativa diferença nos resultado. 99% no treino e 94% no teste. É possível que esse resultado seja melhorado com outras configurações dos algorítmos usados e aplicações de novos métodos.
+
 * Simulação - Para simulação utilizou-se uma linha/amostra do dataset em que o resultado da classificação é  Incidente. Percebe-se que a classificação é realizada corretamente.
+
 * Recomendações - Orienta-se utilizar uma base de dade maior, ou usar novas técnicas para aumentar a quantidade de dados tanto para as variáveis com menor quantidade como de um modo geral, pois, tem-se por nova hipótese, que uma maior quantidade de dados irá trazer maior aprendizado da IA.
 
  
