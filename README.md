@@ -26,8 +26,10 @@ As demais ferramentas e libs utilizadas estão no "requirements.txt"
 
 #Análise exploratória dos dados
 <br>
-Foi realizado o tratamento inicial para limpeza e organização dos dados a fim de gerar a visualização de gráficos para melhor compreensão do dataset utilizado. Para essa etapa 
-Foram realizadas algumas análises na base de dados do desafio para compreender melhor como os dados estão "distribuidos". A partir de então, re
+Foi realizado o tratamento inicial para limpeza e organização dos dados a fim de gerar a visualização de gráficos para melhor compreensão do dataset utilizado.
+Optou-se por remover as colunas com mais do que 4% de dados ausentes, tendo em vista o tigo de dado(categórico) e a maior complexidade de realizar técnicas de input para "missing values". Para as colunas que ainda ficaram com 'rows' sem dado, optou-se por excluir toda a linha para manter a integridade da base de dados.
+<br>
+Foram realizadas algumas análises na base de dados do desafio para compreender melhor como os dados estão "distribuidos". A partir de então, percebeu-se claramente um desbalanceamento no que foi nossa variável de saída dos modelos preditivos que foram extraidas da coluna "classificacao_ocorrencia": Aciente, Incidente e Incidente Grave. Com tal desbalanceamento pode haver problemas de overfitting, maior aprendizado para a variável de maior quantidade de dados. Tal hipótese se confirmou nos teste realizados.
 
 
 
