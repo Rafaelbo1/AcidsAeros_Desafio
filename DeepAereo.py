@@ -34,9 +34,10 @@ plt.show()
 
 #Encoding das variáveis categóricas para inserção nos modelos preditivos
 le = preprocessing.LabelEncoder()
-for coluna in ocorr_otnave.columns:
+for coluna in ocorr_otnave.colunas:
     if (ocorr_otnave[coluna].dtypes == 'object'):
         ocorr_otnave[coluna] = le.fit_transform(ocorr_otnave[coluna])
+
 #Aplicação da Correlação de Pearson para verificar a existência de correlação entre as variáveis
 corr = ocorr_otnave.corr()
 a=ocorr_otnave.iloc[1,:]
