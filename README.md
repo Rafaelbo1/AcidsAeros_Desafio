@@ -29,6 +29,7 @@ As demais ferramentas e libs utilizadas estão no "requirements.txt"
 <br>
 <br>
 <br>
+
 # Análise exploratória e aplicação do desafio.
 <br>
 <br>
