@@ -9,47 +9,11 @@ from imblearn.over_sampling import RandomOverSampler
 from sklearn.metrics import confusion_matrix, f1_score
 import functions as f
 
+#Carregando dados
+ocorr_otnave = f.limpenza_dados()
 
-# Leitura dos CSV's
-ocorrencia = pd.read_csv('ocorrencia.csv', sep=';', low_memory=False)
-ocorrencia_tipo = pd.read_csv('ocorrencia_tipo.csv', sep=';')
-aeronave = pd.read_csv('aeronave.csv', sep=';')
-
-# Tratamento inicial dos dados
-ocorrencia_tipo = ocorrencia_tipo.iloc[:, :-2]
-aeronave = aeronave.drop(['aeronave_operador_categoria'], axis=1)
-
-ocorrencia[['Dia', 'Mes', 'Ano']] = ocorrencia.ocorrencia_dia.str.split("/", expand=True, )
-ocorrencia[['hora']] = ocorrencia.ocorrencia_hora.str.split(":", expand=True, )[0]
-
-ocorr_ot = pd.merge(ocorrencia, ocorrencia_tipo, how='inner', on='codigo_ocorrencia1')
-ocorr_otnave = pd.merge(aeronave, ocorr_ot, how='inner', on='codigo_ocorrencia2')
-ocorr_otnave = ocorr_otnave.drop(['ocorrencia_dia', 'ocorrencia_hora', 'codigo_ocorrencia', 'codigo_ocorrencia1',
-                                  'codigo_ocorrencia2', 'codigo_ocorrencia3', 'codigo_ocorrencia4',
-                                  'aeronave_pmd_categoria', 'ocorrencia_pais'], axis=1)
-
-print("Missing values: ", ocorr_otnave.isnull().sum())
-print("__________________________________________________")
-print("*** values: ", ocorr_otnave.isin(['***']).sum())
-
-# Limpeza de Dados - remover colunas com mais do que 4%(0,4) de dados ausentes
-# Remove as linhas com os dados restantes ausentes
-for coluna in ocorr_otnave:
-    print(coluna)
-    contarMiss = ocorr_otnave[coluna].isna().sum()  # + ocorr_otnave[coluna].isin(['***']).sum(axis=0)\
-    # + ocorr_otnave[coluna].isin(['****']).sum(axis=0)
-    perc = (contarMiss / len(ocorr_otnave))
-    # coluna com
-    if perc > 0.04:
-        ocorr_otnave.drop([coluna], axis=1, inplace=True)
-    else:
-        # ocorr_otnave = ocorr_otnave[ocorr_otnave[coluna] != '***']
-        ocorr_otnave = ocorr_otnave[ocorr_otnave[coluna].notna()]
-
-print("__________________________________________________")
-#print("*** values: ", ocorr_otnave.isin(['***']).sum())
-print("Missing values: ", ocorr_otnave.isnull().sum())
-
+#Análise exploratória dos dados
+analise_dados = f.eda(ocorr_otnave)
 
 #Contagem de cada tipo/label de dado em cada coluna do dataset
 for column in ocorr_otnave.columns:
