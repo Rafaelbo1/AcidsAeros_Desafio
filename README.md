@@ -31,11 +31,15 @@ Etapa 1 - Foi realizado o tratamento inicial para limpeza e organização dos da
 Optou-se por remover as colunas com mais do que 4% de dados ausentes, tendo em vista o tigo de dado(categórico) e a maior complexidade de realizar técnicas de input para "missing values". Para as colunas que ainda ficaram com 'rows' sem dado, optou-se por excluir toda a linha para manter a integridade da base de dados.
 <br>
 <br>
-Etapa 2 - Foram realizadas algumas análises na base de dados do desafio para compreender melhor como os dados estão "distribuidos". A partir de então, percebeu-se claramente um desbalanceamento no que foi nossa variável de saída dos modelos preditivos que foram extraidas da coluna "classificacao_ocorrencia": Aciente, Incidente e Incidente Grave. Com tal desbalanceamento pode haver problemas de overfitting, maior aprendizado para a variável de maior quantidade de dados. Tal hipótese se confirmou nos teste realizados.
+Etapa 2 - Foram realizadas algumas análises na base de dados do desafio para compreender melhor como os dados estão "distribuidos". A partir de então, percebeu-se claramente um desbalanceamento no que foi nossa variável de saída dos modelos preditivos que foram extraidas da coluna 'ocorrencia_classificacao': Aciente, Incidente e Incidente Grave. Com tal desbalanceamento pode haver problemas de overfitting, maior aprendizado para a variável de maior quantidade de dados. Tal hipótese se confirmou nos teste realizados.
 <br>
 <br>
 Etapa 3 - Como a base de dados utilizada possui valores categóricos, houve a necessidade de codificação dos dados categóricos. Realizou-se para esta etapa a codificação por "enumeração" das "labels" ou usando a biblioteca 'scikit-learn - LabelEncoder()'. Optou-se por esse método de codificação por ser o mais simple e por exigir menor processamento na execução.
 Para a codificação dos dados categóricos de saída, optou-se pelo one-hot-encoding, uma vez que modelos de aprendizagem de máquina para classificação ajustam-se melhor com esse tippo de saída, usando como função 'loss' a loss='categorical_crossentropy' e a métrica de avaliação o modelo a metrics=['accuracy'].
+<br>
+<br>
+Etapa 4 - Acredita-se que com a base de dados é possível contruir um modelo de classificação para a variável 'ocorrencia_classificacao', a partir dessa premissa, realizou-se nesta etapa a utilização de dois algorítmos de DeepLearning (o objetivo era executar um algorítmo mais trabalhoso para maior aplicação de conhecimentos de modelos de IA/machinelearning - posteriormente, pode-se aplica outros como árvore de decisão, regressão logística, etc.).
+          O código do modelo está pronto para usar os algorítmos de LSTM e GRU e um Autoencoder. Ao final temos as métricas de avaliação e um teste com a inserção de uma ocorrência na IA salva, simulando, de forma beeemmm simples, uma aplicação prática, tal simulação é a última execução do código.
 
 
 
