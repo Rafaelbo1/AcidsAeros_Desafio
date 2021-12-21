@@ -19,15 +19,12 @@ As Entidades e seus respctivos atribuitos foram extraídos dos seguintes arquivo
 # Requisitos
 
 * Python 3.6
-As demais ferramentas e libs utilizadas estão no "requirements.txt"
-
+* As demais ferramentas e libs utilizadas estão no "requirements.txt"
+<br>
 # Arquivos .py
 * DeepAereo.py - é o código 'liso' para melhor vizualização do que está sendo feito em cada etapa.
 * functions.py - Onde estão inserídas as funções para execução da EDA, LSTM e GRU e Autoencoder, além do carregamento, limpeza e tratamento dos dados.
 
-
-<br>
-<br>
 <br>
 
 # Análise exploratória e aplicação do desafio.
